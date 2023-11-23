@@ -48,12 +48,15 @@ export default {
 
 .footer-wrapper {
     height: $footer-top-height;
+    background-position: center;
     background-image: url(../assets/img/footer-bg.jpg);
+    @include bg-image-properties(center, no-repeat, cover);
 
     .footer-container {
         @include container;
         @include flex(row, start, center);
-        @include logo-bg;
+        @include bg-image-properties(right, no-repeat, auto);
+        background-image: url(../assets/img/dc-logo-bg.png);
         height: 100%;
         gap: 1rem;
 
