@@ -41,10 +41,12 @@ export default {
 
 <template>
     <header>
-        <img src="../assets/img/dc-logo.png" alt="Logo DC">
-        <ul>
-            <li v-for="(link, index) in navLinks">{{ link.text }}</li>
-        </ul>
+        <div>
+            <img src="../assets/img/dc-logo.png" alt="Logo DC">
+            <ul>
+                <li v-for="(link, index) in navLinks">{{ link.text }}</li>
+            </ul>
+        </div>
     </header>
 </template>
 <style lang="scss" scoped>
@@ -52,9 +54,13 @@ export default {
 @use "../style/partials/mixins" as *;
 
 header {
-    height: $header-height;
     @include flex(row, center, center);
-    gap: 30rem;
+    height: $header-height;
+}
+
+div {
+    @include container;
+    @include flex(row, space-between, center);
 }
 
 img {
