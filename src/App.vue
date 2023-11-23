@@ -1,10 +1,12 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppContent from "./components/AppContent.vue";
+import AppFooterTop from "./components/AppFooterTop.vue";
 export default {
   components: {
     AppHeader,
-    AppContent
+    AppContent,
+    AppFooterTop,
   },
 };
 </script>
@@ -12,6 +14,7 @@ export default {
 <template>
   <AppHeader />
   <AppContent />
+  <AppFooterTop />
 </template>
 
 <style lang="scss">

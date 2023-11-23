@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-           text: "--> Content goes here <--"
+            text: "--> Content goes here <--"
         }
     },
 }
@@ -17,16 +17,19 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
+
 .content-wrapper {
     height: $content-wrapper-height;
     background-color: $content-wrapper-bg-color;
     @include flex(row, center, center);
-}
+
     .content {
         @include container;
+
         span {
             font-size: 2rem;
             color: white;
         }
     }
+}
 </style>

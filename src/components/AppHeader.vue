@@ -44,7 +44,7 @@ export default {
         <div>
             <img src="../assets/img/dc-logo.png" alt="Logo DC">
             <ul>
-                <li v-for="(link, index) in navLinks">{{ link.text }}</li>
+                <li v-for="(link, index) in navLinks"><a>{{ link.text }}</a></li>
             </ul>
         </div>
     </header>
@@ -56,20 +56,20 @@ export default {
 header {
     @include flex(row, center, center);
     height: $header-height;
-}
 
-div {
-    @include container;
-    @include flex(row, space-between, center);
-}
+    div {
+        @include container;
+        @include flex(row, space-between, center);
 
-img {
-    width: 80px;
-}
+        img {
+            width: 80px;
+        }
 
-ul {
-    list-style-type: none;
-    @include flex(row, center, center);
-    gap: 1rem;
+        ul {
+            list-style-type: none;
+            @include flex(row, center, center);
+            gap: 1rem;
+        }
+    }
 }
 </style>

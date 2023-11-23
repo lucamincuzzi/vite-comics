@@ -9,3 +9,13 @@
     width: 70%;
     margin: 0 auto;
 }
+
+@mixin logo-bg {
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+@mixin align-self($position) {
+    align-self: $position;
+}
