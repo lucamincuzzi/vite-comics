@@ -1,24 +1,51 @@
 <script>
 export default {
+    data() {
+        return {
+            navLinks: [
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+                {
+                    text: "Lorem"
+                },
+            ]
+        }
+    }
 }
 </script>
 
 <template>
-<header>
-    <img src="../assets/img/dc-logo.png" alt="Logo DC">
-    <ul>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-        <li>Lorem</li>
-    </ul>
-</header>
+    <header>
+        <img src="../assets/img/dc-logo.png" alt="Logo DC">
+        <ul>
+            <li v-for="(link, index) in navLinks">{{ link.text }}</li>
+        </ul>
+    </header>
 </template>
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
