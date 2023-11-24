@@ -15,8 +15,9 @@ export default {
             <ul>
                 <li v-for="(link, index) in navLinks"><a>{{ link.toUpperCase() }}</a></li>
             </ul>
-        </div>
+        </div>  
     </header>
+    <div class="hero"></div>
 </template>
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
@@ -46,6 +47,7 @@ header {
                 position: relative;
                 font-size: 0.8rem;
                 font-weight: bold;
+                letter-spacing: -0.5px;
                 height: 100%;
 
                 &::after {
@@ -67,5 +69,13 @@ header {
             }
         }
     }
+}
+
+.hero {
+    width: 100%;
+    height: 280px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    @include bg-image-properties(top, no-repeat, cover);
+    
 }
 </style>

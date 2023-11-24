@@ -29,7 +29,7 @@ export default {
     <div class="footer-wrapper">
         <div class="footer-container">
             <div v-for="item in about" :key="item.title" class="links-container">
-                <h4>{{ item.title }}</h4>
+                <h4>{{ item.title.toUpperCase() }}</h4>
                 <ul>
                     <li v-for="link in item.links">{{ link }}</li>
                 </ul>
@@ -64,6 +64,7 @@ export default {
 
             h4 {
                 font-size: 1.2rem;
+                letter-spacing: -0.5px;
             }
 
             ul {
