@@ -73,7 +73,7 @@ header {
 
 .hero {
     width: 100%;
-    height: 280px;
+    height: $hero-height;
     background-image: url(../assets/img/jumbotron.jpg);
     @include bg-image-properties(top, no-repeat, cover);
     
