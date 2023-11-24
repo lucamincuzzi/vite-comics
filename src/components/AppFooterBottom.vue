@@ -55,7 +55,7 @@ footer {
             gap: 15px;
 
             span {
-                color: $cta-text-color;
+                color: $main-color;
                 font-size: 1.2rem;
             }
 

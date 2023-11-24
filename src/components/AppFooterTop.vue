@@ -1,41 +1,37 @@
 <script>
 export default {
-
+    data() {
+        return {
+            about: [
+                {
+                    title: "DC Comics",
+                    links: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"],
+                },
+                {
+                    title: "Shop",
+                    links: ["Shop DC", "Shop DC Collectibles"],
+                },
+                {
+                    title: "DC",
+                    links: ["Terms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us" ],
+                },
+                {
+                    title: "Sites",
+                    links: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+                },
+            ]
+        };
+    },
 }
 </script>
 
 <template>
     <div class="footer-wrapper">
         <div class="footer-container">
-            <div class="links-container">
-                <h4>Lorem</h4>
+            <div v-for="item in about" :key="item.title" class="links-container">
+                <h4>{{ item.title }}</h4>
                 <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
-                <h4>Lorem</h4>
-                <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
-            </div>
-            <div class="links-container">
-                <h4>Lorem</h4>
-                <ul>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
+                    <li v-for="link in item.links">{{ link }}</li>
                 </ul>
             </div>
         </div>
@@ -63,7 +59,7 @@ export default {
         .links-container {
             height: 80%;
             color: white;
-            @include flex(column, start, center);
+            @include flex(column, stretch, start);
             gap: 10px;
 
             h4 {
@@ -74,7 +70,9 @@ export default {
                 list-style-type: none;
 
                 li {
-                    color: lightgray;
+                    font-size: 0.75rem;
+                    opacity: 0.5;
+                    margin-top: 5px;
                 }
             }
         }

@@ -2,38 +2,7 @@
 export default {
     data() {
         return {
-            navLinks: [
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-                {
-                    text: "Lorem"
-                },
-            ]
+            navLinks: ["Characters", "Comics", "Movies", "Tv", "Games", "Collectibles", "Videos", "Fans", "News", "Shop"],
         }
     }
 }
@@ -44,7 +13,7 @@ export default {
         <div>
             <img src="../assets/img/dc-logo.png" alt="Logo DC">
             <ul>
-                <li v-for="(link, index) in navLinks"><a>{{ link.text }}</a></li>
+                <li v-for="(link, index) in navLinks"><a>{{ link.toUpperCase() }}</a></li>
             </ul>
         </div>
     </header>
@@ -60,6 +29,7 @@ header {
     div {
         @include container;
         @include flex(row, space-between, center);
+        height: 100%;
 
         img {
             width: 80px;
@@ -69,6 +39,32 @@ header {
             list-style-type: none;
             @include flex(row, center, center);
             gap: 1rem;
+            height: 100%;
+
+            li {
+                @include flex(row, center, center);
+                position: relative;
+                font-size: 0.8rem;
+                font-weight: bold;
+                height: 100%;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 0px;
+                    background-color: $main-color;
+                    transition: all .3s;
+                }
+
+                &:hover {
+                    &::after {
+                        height: 3px;
+                    }
+                }
+            }
         }
     }
 }
