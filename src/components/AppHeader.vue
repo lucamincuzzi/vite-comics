@@ -13,7 +13,7 @@ export default {
         <div>
             <img src="../assets/img/dc-logo.png" alt="Logo DC">
             <ul>
-                <li v-for="(link, index) in navLinks"><a>{{ link.toUpperCase() }}</a></li>
+                <li v-for="link in navLinks"><a>{{ link.toUpperCase() }}</a></li>
             </ul>
         </div>  
     </header>
@@ -62,6 +62,7 @@ header {
                 }
 
                 &:hover {
+                    cursor: pointer;
                     &::after {
                         height: 3px;
                     }

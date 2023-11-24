@@ -142,6 +142,7 @@ export default {
         .load {
             @include flex(row, center, center);
             margin-bottom: 20px;
+
             button {
                 @include border(2px, solid, $main-color);
                 background-color: $main-color;

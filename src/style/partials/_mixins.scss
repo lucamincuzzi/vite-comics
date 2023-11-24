@@ -10,6 +10,11 @@
     margin: 0 auto;
 }
 
+@mixin container-small {
+    width: 65%;
+    margin: 0 auto;
+}
+
 @mixin bg-image-properties($position, $repeat, $size) {
     background-position: $position;
     background-repeat: $repeat;
